@@ -8,6 +8,7 @@ render_sidebar()
 
 st.set_page_config(
     page_title="Generator Sertifikat",
+    page_icon="favicon.png",
     layout="wide",
     initial_sidebar_state="expanded"
 )
