@@ -36,8 +36,14 @@ col1, col2 = st.columns([1, 1])
 # FORM
 # =========================
 with col1:
-    template_file = st.file_uploader("Template")
-    csv_file = st.file_uploader("CSV")
+    template_file = st.file_uploader(
+    "Template",
+    type=["jpg", "jpeg", "png"]
+)
+    csv_file = st.file_uploader(
+    "CSV",
+    type=["csv"]
+)
 
     font_name = st.selectbox("Font", list(fonts.keys())) if fonts else None
     font_size = st.slider("Font Size Input1", 20, 150, 60)
