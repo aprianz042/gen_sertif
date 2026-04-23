@@ -33,20 +33,37 @@ st.title("📘 Panduan Penggunaan Generator Sertifikat")
 
 
 # =========================
-# 1 FIELD
+# Template
 # =========================
-st.subheader("🟢 Contoh 1 Field (input1)")
-st.image("template/INPUT1.png", caption="Contoh Sertifikat", use_container_width=True)
-st.markdown("### 📑 Contoh Format CSV")
+st.subheader("### Persiapan Template")
+st.markdown("Siapkan template yang ingin di-generate ")
 
-df1 = pd.DataFrame({
-    "input1": ["Budi Santoso", "Siti Aminah", "Andi Wijaya"]
+dataf = pd.DataFrame({
+    "header1": ["Budi Santoso", "Siti Aminah", "Andi Wijaya"],
+    "header2": ["1987654321", "1981234567", "1989988776"],
+    "header3": ["Analis Sistem", "Programmer", "Administrator"]
 })
 
-st.dataframe(df1, use_container_width=True)
+st.dataframe(dataf, use_container_width=True)
+st.markdown("header1 / header2 / header3 bebas diganti dengan nama kolom apapun, seperti nama, nip, jabatan, dll")
 
-csv1 = load_csv_bytes("template/input1.csv")
-st.download_button("⬇️ Download Template", csv1, "input1.csv")
+st.divider()
+
+# =========================
+# Data
+# =========================
+st.subheader("### 📑 Persiapan Data (Bulk Data)")
+st.markdown("Digunakan untuk data yang banyak sekaligus")
+st.markdown("Data harus dalam bentuk CSV dengan contoh data di bawah ini: ")
+
+dataf = pd.DataFrame({
+    "header1": ["Budi Santoso", "Siti Aminah", "Andi Wijaya"],
+    "header2": ["1987654321", "1981234567", "1989988776"],
+    "header3": ["Analis Sistem", "Programmer", "Administrator"]
+})
+
+st.dataframe(dataf, use_container_width=True)
+st.markdown("header1 / header2 / header3 bebas diganti dengan nama kolom apapun, seperti nama, nip, jabatan, dll")
 
 st.divider()
 
